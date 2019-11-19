@@ -1,0 +1,6 @@
+framework module Pods_RunningFront {
+  umbrella header "Pods-RunningFront-umbrella.h"
+
+  export *
+  module * { export * }
+}
