@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X9h-6r-9Fy">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="CgY-5q-1Gw">
+            <objects>
+                <viewController id="ZXK-lq-FDE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oJS-fd-fgP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="NjK-fu-WCS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ubs-qc-4iz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eur-n2-50D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.82608695652186" y="150.66964285714286"/>
+        </scene>
+        <!--客服-->
+        <scene sceneID="6KU-GB-nBi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X9h-6r-9Fy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="客服" image="ic_Server" id="tU2-fn-5ws"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p5j-HE-YzK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZXK-lq-FDE" kind="relationship" relationship="rootViewController" id="OIH-nD-lAN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJ0-8L-GIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="150.66964285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_Server" width="32.5" height="32.5"/>
+    </resources>
+</document>

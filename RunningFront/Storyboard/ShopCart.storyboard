@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jgo-TD-nEJ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EWM-oV-8wc">
+            <objects>
+                <viewController id="6y8-ec-vg5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DJv-MP-e7J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="FV3-Gp-sXU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ags-9v-Q6D"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zng-FJ-nWj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815.94202898550736" y="57.589285714285708"/>
+        </scene>
+        <!--購物車-->
+        <scene sceneID="coK-V3-oy4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jgo-TD-nEJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="購物車" image="ic_ShopCart" id="fS4-8L-jfr"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3VJ-ep-B0D">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6y8-ec-vg5" kind="relationship" relationship="rootViewController" id="KfZ-bV-j9o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ys7-2B-G0G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94.20289855072464" y="57.589285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_ShopCart" width="30" height="27.5"/>
+    </resources>
+</document>
