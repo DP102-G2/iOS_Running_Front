@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		A911432E2382BC8900D7DF02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A911432C2382BC8900D7DF02 /* Main.storyboard */; };
 		A91143302382BC8A00D7DF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A911432F2382BC8A00D7DF02 /* Assets.xcassets */; };
 		A91143332382BC8A00D7DF02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91143312382BC8A00D7DF02 /* LaunchScreen.storyboard */; };
+		A93186AA23855FBB005D7E9A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93186A923855FBB005D7E9A /* Common.swift */; };
 		A983D0572383FEA700A135C6 /* UICommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D0562383FEA700A135C6 /* UICommon.swift */; };
 		A983D05A23840CB900A135C6 /* RunningTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D05923840CB900A135C6 /* RunningTBC.swift */; };
 		A983D05C23840CC700A135C6 /* ShopTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D05B23840CC700A135C6 /* ShopTBC.swift */; };
@@ -43,6 +44,7 @@
 		A911432F2382BC8A00D7DF02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A91143322382BC8A00D7DF02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A91143342382BC8A00D7DF02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A93186A923855FBB005D7E9A /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		A983D0562383FEA700A135C6 /* UICommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICommon.swift; sourceTree = "<group>"; };
 		A983D05923840CB900A135C6 /* RunningTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTBC.swift; sourceTree = "<group>"; };
 		A983D05B23840CC700A135C6 /* ShopTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTBC.swift; sourceTree = "<group>"; };
@@ -78,7 +80,6 @@
 				5AE0550DBC616BF65CD56B89 /* Pods-RunningFront.debug.xcconfig */,
 				8C1924F64A6A259F4B0B6010 /* Pods-RunningFront.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -132,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				A983D0562383FEA700A135C6 /* UICommon.swift */,
+				A93186A923855FBB005D7E9A /* Common.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -285,6 +287,7 @@
 				A9EF07FD2384202C003B22DA /* ShopMainVC.swift in Sources */,
 				A91143272382BC8900D7DF02 /* AppDelegate.swift in Sources */,
 				A983D05A23840CB900A135C6 /* RunningTBC.swift in Sources */,
+				A93186AA23855FBB005D7E9A /* Common.swift in Sources */,
 				A91143292382BC8900D7DF02 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
