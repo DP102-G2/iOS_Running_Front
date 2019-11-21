@@ -15,6 +15,10 @@
 		A91143302382BC8A00D7DF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A911432F2382BC8A00D7DF02 /* Assets.xcassets */; };
 		A91143332382BC8A00D7DF02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91143312382BC8A00D7DF02 /* LaunchScreen.storyboard */; };
 		A93186AA23855FBB005D7E9A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93186A923855FBB005D7E9A /* Common.swift */; };
+		A9378E1E23859CB6003355E3 /* SignUp_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9378E1D23859CB6003355E3 /* SignUp_TVC.swift */; };
+		A9599A2C23856B69004473C7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9599A2B23856B69004473C7 /* Login.storyboard */; };
+		A9599A2E23856D23004473C7 /* LoginMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9599A2D23856D23004473C7 /* LoginMainVC.swift */; };
+		A9599A3123856D8B004473C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9599A3023856D8B004473C7 /* User.swift */; };
 		A983D0572383FEA700A135C6 /* UICommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D0562383FEA700A135C6 /* UICommon.swift */; };
 		A983D05A23840CB900A135C6 /* RunningTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D05923840CB900A135C6 /* RunningTBC.swift */; };
 		A983D05C23840CC700A135C6 /* ShopTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D05B23840CC700A135C6 /* ShopTBC.swift */; };
@@ -45,6 +49,10 @@
 		A91143322382BC8A00D7DF02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A91143342382BC8A00D7DF02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93186A923855FBB005D7E9A /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		A9378E1D23859CB6003355E3 /* SignUp_TVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_TVC.swift; sourceTree = "<group>"; };
+		A9599A2B23856B69004473C7 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		A9599A2D23856D23004473C7 /* LoginMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainVC.swift; sourceTree = "<group>"; };
+		A9599A3023856D8B004473C7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A983D0562383FEA700A135C6 /* UICommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICommon.swift; sourceTree = "<group>"; };
 		A983D05923840CB900A135C6 /* RunningTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTBC.swift; sourceTree = "<group>"; };
 		A983D05B23840CC700A135C6 /* ShopTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTBC.swift; sourceTree = "<group>"; };
@@ -117,6 +125,7 @@
 				A91143282382BC8900D7DF02 /* SceneDelegate.swift */,
 				A911432A2382BC8900D7DF02 /* RunningMainVC.swift */,
 				A9EF07FC2384202C003B22DA /* ShopMainVC.swift */,
+				A9599A2F23856D2F004473C7 /* Login */,
 				A983D0622384142A00A135C6 /* Storyboard */,
 				A983D05923840CB900A135C6 /* RunningTBC.swift */,
 				A9C01CEC238423DA008C6FE9 /* SettingVC.swift */,
@@ -127,6 +136,17 @@
 				A91143342382BC8A00D7DF02 /* Info.plist */,
 			);
 			path = RunningFront;
+			sourceTree = "<group>";
+		};
+		A9599A2F23856D2F004473C7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A9599A2D23856D23004473C7 /* LoginMainVC.swift */,
+				A9378E1D23859CB6003355E3 /* SignUp_TVC.swift */,
+				A9599A3023856D8B004473C7 /* User.swift */,
+				A9599A2B23856B69004473C7 /* Login.storyboard */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		A983D0582384027500A135C6 /* Common */ = {
@@ -227,6 +247,7 @@
 				A9EF07EF23841BBC003B22DA /* RunningInquire.storyboard in Resources */,
 				A9EF07FB23841F80003B22DA /* ShopServer.storyboard in Resources */,
 				A9EF07FF23842182003B22DA /* Setting.storyboard in Resources */,
+				A9599A2C23856B69004473C7 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,9 +302,12 @@
 			files = (
 				A983D0572383FEA700A135C6 /* UICommon.swift in Sources */,
 				A9C01CED238423DA008C6FE9 /* SettingVC.swift in Sources */,
+				A9599A2E23856D23004473C7 /* LoginMainVC.swift in Sources */,
+				A9599A3123856D8B004473C7 /* User.swift in Sources */,
 				A9EF080323842291003B22DA /* SettingNC.swift in Sources */,
 				A983D05C23840CC700A135C6 /* ShopTBC.swift in Sources */,
 				A911432B2382BC8900D7DF02 /* RunningMainVC.swift in Sources */,
+				A9378E1E23859CB6003355E3 /* SignUp_TVC.swift in Sources */,
 				A9EF07FD2384202C003B22DA /* ShopMainVC.swift in Sources */,
 				A91143272382BC8900D7DF02 /* AppDelegate.swift in Sources */,
 				A983D05A23840CB900A135C6 /* RunningTBC.swift in Sources */,

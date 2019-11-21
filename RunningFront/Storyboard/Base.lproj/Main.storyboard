@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--RunningTBC-->
+        <!--Tab Bar Controller-->
         <scene sceneID="ngq-Aa-L9C">
             <objects>
-                <tabBarController storyboardIdentifier="runTabBar" automaticallyAdjustsScrollViewInsets="NO" id="b6H-Cc-82B" customClass="RunningTBC" customModule="RunningFront" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="runTabBar" automaticallyAdjustsScrollViewInsets="NO" id="b6H-Cc-82B" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YpR-Zj-RWz">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -68,11 +68,10 @@
             </objects>
             <point key="canvasLocation" x="1690" y="1768"/>
         </scene>
-        <!--ShopTBC-->
+        <!--Tab Bar Controller-->
         <scene sceneID="EDZ-cC-KOw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cyw-As-ujk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tabBarController storyboardIdentifier="shopTabBar" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2kl-E9-u47" customClass="ShopTBC" customModule="RunningFront" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="shopTabBar" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2kl-E9-u47" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JgK-1I-Cqc">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -88,6 +87,7 @@
                         <segue destination="OZh-XG-fbE" kind="relationship" relationship="viewControllers" id="7Vp-P5-zkl"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cyw-As-ujk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="274" y="2509"/>
         </scene>

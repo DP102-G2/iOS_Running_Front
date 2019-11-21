@@ -15,17 +15,6 @@ class ShopMainVC: UIViewController {
         setBarButtonItem()
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -41,7 +30,7 @@ extension ShopMainVC {
     
     @objc  func naviToRun(VC : UIViewController) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let shopTabBar = storyboard.instantiateViewController(identifier: "runTabBar") as! RunningTBC
+        let shopTabBar = storyboard.instantiateViewController(identifier: "runTabBar") as! UITabBarController
         shopTabBar.modalPresentationStyle = .fullScreen
         navigationController?.removeFromParent()
         present(shopTabBar, animated: true, completion: nil)
@@ -49,7 +38,7 @@ extension ShopMainVC {
     
     @objc  func naviToSetting() {
         let storyboard = UIStoryboard(name: "Setting", bundle: nil)
-        let setTabBar = storyboard.instantiateViewController(identifier: "setTabBar") as! SettingNC
+        let setTabBar = storyboard.instantiateViewController(identifier: "setTabBar") as! UINavigationController
         setTabBar.modalPresentationStyle = .fullScreen
         navigationController?.removeFromParent()
         present(setTabBar, animated: true, completion: nil)

@@ -38,7 +38,8 @@ extension SettingVC{
     
     @objc  func naviToRun() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let shopTabBar = storyboard.instantiateViewController(identifier: "runTabBar") as! RunningTBC
+        let shopTabBar = storyboard.instantiateViewController(identifier: "runTabBar") as! UITabBarController
+        
         shopTabBar.modalPresentationStyle = .fullScreen
         navigationController?.removeFromParent()
         present(shopTabBar, animated: true, completion: nil)
@@ -46,7 +47,7 @@ extension SettingVC{
     
     @objc  func naviToShop() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let shopTabBar = storyboard.instantiateViewController(identifier: "shopTabBar") as! ShopTBC
+        let shopTabBar = storyboard.instantiateViewController(identifier: "shopTabBar") as! UITabBarController
         shopTabBar.modalPresentationStyle = .fullScreen
         navigationController?.removeFromParent()
         present(shopTabBar, animated: true, completion: nil)

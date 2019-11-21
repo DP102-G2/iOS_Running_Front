@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="1018.840579710145" y="132.58928571428572"/>
         </scene>
-        <!--SettingNC-->
+        <!--Navigation Controller-->
         <scene sceneID="eJY-Qw-vyx">
             <objects>
-                <navigationController storyboardIdentifier="setTabBar" automaticallyAdjustsScrollViewInsets="NO" id="Yyw-jE-nEE" customClass="SettingNC" customModule="RunningFront" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="setTabBar" automaticallyAdjustsScrollViewInsets="NO" id="Yyw-jE-nEE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bj2-QS-jQE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
