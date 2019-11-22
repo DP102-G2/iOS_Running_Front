@@ -31,7 +31,7 @@ class LoginMainVC: UIViewController {
         var user = User(account!, password!)
         let data = try! String(data: JSONEncoder().encode(user), encoding: .utf8)
         
-        var requestParam = [String:String]()
+        var requestParam = [String:String]() // jsonobject -> dic
         requestParam["action"] = "signin"
         requestParam["user"] = data!
         

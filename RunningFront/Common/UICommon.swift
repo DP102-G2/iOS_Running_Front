@@ -33,3 +33,5 @@ func naviToRun(VC : UIViewController) {
     VC.navigationController?.removeFromParent()
     VC.present(shopTabBar, animated: true, completion: nil)
 }
+
+

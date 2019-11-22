@@ -39,3 +39,58 @@ func showSimpleAlert(message: String, viewController: UIViewController) {
     viewController.present(alertController, animated: true, completion:nil)
 }
 
+func getUserNo() -> Int {
+    var user_no = 0
+    if let noStr = UserDefaults.standard.value(forKey: "user_no") {
+        print("Test")
+        user_no = noStr as! Int
+    } else {
+        user_no = 0
+    }
+    return user_no
+}
+
+func logout(VC:UIViewController) -> Bool {
+    let domain = Bundle.main.bundleIdentifier!
+    UserDefaults.standard.removePersistentDomain(forName: domain)
+    UserDefaults.standard.synchronize()
+    print(String(UserDefaults.standard.dictionaryRepresentation().keys.count))
+    
+    if UserDefaults.standard.dictionaryRepresentation().keys.count == 0{
+        showSimpleAlert(message: "登出成功", viewController: VC)
+        return true
+    }
+    return false
+}
+
+
+func doubleFormatter(double:Double) -> Double {
+    let nsNumber = NSNumber(value: double)
+    let customerFormatter = NumberFormatter()
+    customerFormatter.positiveFormat = "#,##0.##"
+    
+    return Double(customerFormatter.number(from: customerFormatter.string(from: nsNumber)!)!)
+}
+
+func timeFormatter(_ time:Int) -> String {
+    
+    let seconds = time % 60
+    let mins = time / 60
+    let hour = time / 3600
+    
+    let customerFormatter = NumberFormatter()
+    customerFormatter.positiveFormat = "00.##"
+    
+    let str = "\(customerFormatter.string(from: NSNumber(value: hour))!):\(customerFormatter.string(from: NSNumber(value: mins))!):\(customerFormatter.string(from: NSNumber(value: seconds))!)"
+    
+    return str
+}
+
+func speedFormatter(_ speed:Double) -> String {
+
+    let customerFormatter = NumberFormatter()
+    customerFormatter.positiveFormat = "0.##"
+    
+    let str = customerFormatter.string(from: NSNumber(value: speed))!
+    return str
+}

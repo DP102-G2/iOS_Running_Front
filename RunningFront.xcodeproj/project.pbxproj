@@ -16,12 +16,12 @@
 		A91143332382BC8A00D7DF02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91143312382BC8A00D7DF02 /* LaunchScreen.storyboard */; };
 		A93186AA23855FBB005D7E9A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93186A923855FBB005D7E9A /* Common.swift */; };
 		A9378E1E23859CB6003355E3 /* SignUp_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9378E1D23859CB6003355E3 /* SignUp_TVC.swift */; };
+		A9378E41238675B7003355E3 /* RunningStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9378E40238675B7003355E3 /* RunningStartVC.swift */; };
+		A9378E432387779D003355E3 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9378E422387779D003355E3 /* Run.swift */; };
 		A9599A2C23856B69004473C7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9599A2B23856B69004473C7 /* Login.storyboard */; };
 		A9599A2E23856D23004473C7 /* LoginMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9599A2D23856D23004473C7 /* LoginMainVC.swift */; };
 		A9599A3123856D8B004473C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9599A3023856D8B004473C7 /* User.swift */; };
 		A983D0572383FEA700A135C6 /* UICommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D0562383FEA700A135C6 /* UICommon.swift */; };
-		A983D05A23840CB900A135C6 /* RunningTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D05923840CB900A135C6 /* RunningTBC.swift */; };
-		A983D05C23840CC700A135C6 /* ShopTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D05B23840CC700A135C6 /* ShopTBC.swift */; };
 		A983D0642384168B00A135C6 /* RunningMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A983D0632384168B00A135C6 /* RunningMain.storyboard */; };
 		A9C01CED238423DA008C6FE9 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C01CEC238423DA008C6FE9 /* SettingVC.swift */; };
 		A9EF07EF23841BBC003B22DA /* RunningInquire.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9EF07EE23841BBC003B22DA /* RunningInquire.storyboard */; };
@@ -33,7 +33,6 @@
 		A9EF07FB23841F80003B22DA /* ShopServer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9EF07FA23841F80003B22DA /* ShopServer.storyboard */; };
 		A9EF07FD2384202C003B22DA /* ShopMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF07FC2384202C003B22DA /* ShopMainVC.swift */; };
 		A9EF07FF23842182003B22DA /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9EF07FE23842182003B22DA /* Setting.storyboard */; };
-		A9EF080323842291003B22DA /* SettingNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF080223842291003B22DA /* SettingNC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,12 +49,12 @@
 		A91143342382BC8A00D7DF02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93186A923855FBB005D7E9A /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		A9378E1D23859CB6003355E3 /* SignUp_TVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_TVC.swift; sourceTree = "<group>"; };
+		A9378E40238675B7003355E3 /* RunningStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningStartVC.swift; sourceTree = "<group>"; };
+		A9378E422387779D003355E3 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		A9599A2B23856B69004473C7 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A9599A2D23856D23004473C7 /* LoginMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainVC.swift; sourceTree = "<group>"; };
 		A9599A3023856D8B004473C7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A983D0562383FEA700A135C6 /* UICommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICommon.swift; sourceTree = "<group>"; };
-		A983D05923840CB900A135C6 /* RunningTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTBC.swift; sourceTree = "<group>"; };
-		A983D05B23840CC700A135C6 /* ShopTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTBC.swift; sourceTree = "<group>"; };
 		A983D0632384168B00A135C6 /* RunningMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RunningMain.storyboard; sourceTree = "<group>"; };
 		A9C01CEC238423DA008C6FE9 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		A9EF07EE23841BBC003B22DA /* RunningInquire.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RunningInquire.storyboard; sourceTree = "<group>"; };
@@ -67,7 +66,6 @@
 		A9EF07FA23841F80003B22DA /* ShopServer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopServer.storyboard; sourceTree = "<group>"; };
 		A9EF07FC2384202C003B22DA /* ShopMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMainVC.swift; sourceTree = "<group>"; };
 		A9EF07FE23842182003B22DA /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
-		A9EF080223842291003B22DA /* SettingNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,19 +121,27 @@
 				A983D0582384027500A135C6 /* Common */,
 				A91143262382BC8900D7DF02 /* AppDelegate.swift */,
 				A91143282382BC8900D7DF02 /* SceneDelegate.swift */,
-				A911432A2382BC8900D7DF02 /* RunningMainVC.swift */,
 				A9EF07FC2384202C003B22DA /* ShopMainVC.swift */,
+				A9378E3F238670D1003355E3 /* Run */,
 				A9599A2F23856D2F004473C7 /* Login */,
 				A983D0622384142A00A135C6 /* Storyboard */,
-				A983D05923840CB900A135C6 /* RunningTBC.swift */,
 				A9C01CEC238423DA008C6FE9 /* SettingVC.swift */,
-				A9EF080223842291003B22DA /* SettingNC.swift */,
-				A983D05B23840CC700A135C6 /* ShopTBC.swift */,
 				A911432F2382BC8A00D7DF02 /* Assets.xcassets */,
 				A91143312382BC8A00D7DF02 /* LaunchScreen.storyboard */,
 				A91143342382BC8A00D7DF02 /* Info.plist */,
 			);
 			path = RunningFront;
+			sourceTree = "<group>";
+		};
+		A9378E3F238670D1003355E3 /* Run */ = {
+			isa = PBXGroup;
+			children = (
+				A983D0632384168B00A135C6 /* RunningMain.storyboard */,
+				A9378E40238675B7003355E3 /* RunningStartVC.swift */,
+				A911432A2382BC8900D7DF02 /* RunningMainVC.swift */,
+				A9378E422387779D003355E3 /* Run.swift */,
+			);
+			path = Run;
 			sourceTree = "<group>";
 		};
 		A9599A2F23856D2F004473C7 /* Login */ = {
@@ -163,7 +169,6 @@
 			children = (
 				A911432C2382BC8900D7DF02 /* Main.storyboard */,
 				A9EF07FE23842182003B22DA /* Setting.storyboard */,
-				A983D0632384168B00A135C6 /* RunningMain.storyboard */,
 				A9EF07EE23841BBC003B22DA /* RunningInquire.storyboard */,
 				A9EF07F223841CCD003B22DA /* RunningGroup.storyboard */,
 				A9EF07F023841C82003B22DA /* RunningAchieve.storyboard */,
@@ -300,17 +305,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9378E41238675B7003355E3 /* RunningStartVC.swift in Sources */,
+				A9378E432387779D003355E3 /* Run.swift in Sources */,
 				A983D0572383FEA700A135C6 /* UICommon.swift in Sources */,
 				A9C01CED238423DA008C6FE9 /* SettingVC.swift in Sources */,
 				A9599A2E23856D23004473C7 /* LoginMainVC.swift in Sources */,
 				A9599A3123856D8B004473C7 /* User.swift in Sources */,
-				A9EF080323842291003B22DA /* SettingNC.swift in Sources */,
-				A983D05C23840CC700A135C6 /* ShopTBC.swift in Sources */,
 				A911432B2382BC8900D7DF02 /* RunningMainVC.swift in Sources */,
 				A9378E1E23859CB6003355E3 /* SignUp_TVC.swift in Sources */,
 				A9EF07FD2384202C003B22DA /* ShopMainVC.swift in Sources */,
 				A91143272382BC8900D7DF02 /* AppDelegate.swift in Sources */,
-				A983D05A23840CB900A135C6 /* RunningTBC.swift in Sources */,
 				A93186AA23855FBB005D7E9A /* Common.swift in Sources */,
 				A91143292382BC8900D7DF02 /* SceneDelegate.swift in Sources */,
 			);

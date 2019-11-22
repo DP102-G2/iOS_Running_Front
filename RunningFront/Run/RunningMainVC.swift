@@ -12,23 +12,20 @@ class RunningMainVC: UIViewController {
     
     var user_no = 0
     
+    
+    
     @IBAction func btLgout(_ sender: UIButton) {
         
-//        let domain = Bundle.main.bundleIdentifier!
-//        UserDefaults.standard.removePersistentDomain(forName: domain)
-//        UserDefaults.standard.synchronize()
+        if logout(VC: self) == false{
+            naviToLogin(VC: self)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
-        
-//        if let noStr = UserDefaults.standard.value(forKey: "user_no") {
-//            print("Test")
-//            user_no = noStr as! Int
-//        } else {
-//            user_no = 0
-//        }
-//
+        self.tabBarController?.tabBar.isHidden = false
+
+//        user_no = getUserNo()
+//        
 //        if user_no == 0 {
 //            naviToLogin(VC: self)
 //        }

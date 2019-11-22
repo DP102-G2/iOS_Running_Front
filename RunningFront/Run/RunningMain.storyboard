@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G9F-MS-0zi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Running MainVC-->
+        <scene sceneID="JDf-QE-ULw">
+            <objects>
+                <viewController id="Fmw-x7-Xor" customClass="RunningMainVC" customModule="RunningFront" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tdn-JN-olD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50S-E6-hnC">
+                                <rect key="frame" x="183" y="275" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="btLgout:" destination="Fmw-x7-Xor" eventType="touchDown" id="zTs-wP-cXD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQj-D4-GZc">
+                                <rect key="frame" x="176" y="702" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="開始跑步"/>
+                                <connections>
+                                    <segue destination="On7-T7-M0q" kind="show" id="foL-Cx-Cxf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Bvm-cY-KmA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Za7-L4-xQ7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezw-r9-cin" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915.94202898550736" y="220.98214285714286"/>
+        </scene>
+        <!--Running StartVC-->
+        <scene sceneID="AA8-0X-xNb">
+            <objects>
+                <viewController id="On7-T7-M0q" customClass="RunningStartVC" customModule="RunningFront" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RRm-Fj-GwP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vvS-8f-hbC">
+                                <rect key="frame" x="20" y="108" width="374" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vvS-8f-hbC" secondAttribute="height" id="Wbf-p0-6fu"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="On7-T7-M0q" id="JEf-b5-pZx"/>
+                                </connections>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="LMT-bd-nt4">
+                                <rect key="frame" x="20" y="509" width="67" height="196"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="時間：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Unm-wc-6mp">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="距離：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLp-ez-fjL">
+                                        <rect key="frame" x="0.0" y="56.5" width="67" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="卡路里" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ts-RL-fSv">
+                                        <rect key="frame" x="0.0" y="113" width="67" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="時速：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqc-dz-Rgg">
+                                        <rect key="frame" x="0.0" y="169.5" width="67" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdg-5K-35A">
+                                <rect key="frame" x="164" y="745" width="86" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="開始跑步"/>
+                                <connections>
+                                    <action selector="btRunStatus:" destination="On7-T7-M0q" eventType="touchUpInside" id="QaH-1d-Orf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LMT-bd-nt4" firstAttribute="leading" secondItem="vvS-8f-hbC" secondAttribute="leading" id="33a-kn-TDo"/>
+                            <constraint firstItem="vvS-8f-hbC" firstAttribute="leading" secondItem="RRm-Fj-GwP" secondAttribute="leadingMargin" id="AXv-QF-h9h"/>
+                            <constraint firstItem="LMT-bd-nt4" firstAttribute="top" secondItem="vvS-8f-hbC" secondAttribute="bottom" constant="27" id="aV7-d0-TXb"/>
+                            <constraint firstItem="vvS-8f-hbC" firstAttribute="trailing" secondItem="RRm-Fj-GwP" secondAttribute="trailingMargin" id="rtw-oR-yUR"/>
+                            <constraint firstItem="vvS-8f-hbC" firstAttribute="top" secondItem="e6e-R3-icR" secondAttribute="top" constant="20" id="zjd-BJ-Ytw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e6e-R3-icR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="S4H-Vj-6OE"/>
+                    <connections>
+                        <outlet property="lbCalorie" destination="8Ts-RL-fSv" id="E9y-cw-M11"/>
+                        <outlet property="lbDistance" destination="zLp-ez-fjL" id="HRn-rR-w6S"/>
+                        <outlet property="lbSpeed" destination="Uqc-dz-Rgg" id="1lq-ZB-Ryz"/>
+                        <outlet property="lbTime" destination="Unm-wc-6mp" id="XiW-rB-KD8"/>
+                        <outlet property="mapView" destination="vvS-8f-hbC" id="XCS-Ud-mrQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BqE-ev-g5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721.7391304347827" y="220.98214285714286"/>
+        </scene>
+        <!--跑步-->
+        <scene sceneID="Aj8-Dg-y9m">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G9F-MS-0zi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="跑步" image="ic_Running" springLoaded="YES" id="hFr-k9-0pd"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MRp-Gh-5fO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fmw-x7-Xor" kind="relationship" relationship="rootViewController" id="gMx-3R-8zU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ib6-ES-hog" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5.7971014492753632" y="220.98214285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_Running" width="26.5" height="32.5"/>
+    </resources>
+</document>
