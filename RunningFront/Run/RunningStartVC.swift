@@ -87,9 +87,9 @@ class RunningStartVC: UIViewController,MKMapViewDelegate {
         
         lbDistance.text = "距離：\(distance) 公尺"
         
-        speed = (distance / Double(time) * 3600.0 / 1000.0)
+        speed = doubleFormatter(double: (distance / Double(time) * 3600.0 / 1000.0))
         lbSpeed.text = "速度：\(speedFormatter(speed)) 小時/公里"
-        calorie = 70.0 * (Double(time) / 3600.0) * 30.0 / (Double(time) / Double(distance) * 400.0 / 60.0)
+        calorie = doubleFormatter(double: 70.0 * (Double(time) / 3600.0) * 30.0 / (Double(time) / Double(distance) * 400.0 / 60.0))
         lbCalorie.text = "卡路里：\(speedFormatter(calorie)) 卡"
         
         
@@ -131,8 +131,6 @@ class RunningStartVC: UIViewController,MKMapViewDelegate {
 
             
             // 製作線條的部分，使用addOverlay會自動呼叫rendererFor
-
-            
             let user_ann = MKPointAnnotation() //設定標記跟點位
             user_ann.coordinate = CLLocationCoordinate2D(latitude:userLocation.coordinate.latitude, longitude:userLocation.coordinate.longitude)
             user_ann.title = "point"

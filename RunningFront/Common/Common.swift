@@ -42,7 +42,7 @@ func showSimpleAlert(message: String, viewController: UIViewController) {
 func getUserNo() -> Int {
     var user_no = 0
     if let noStr = UserDefaults.standard.value(forKey: "user_no") {
-        print("Test")
+        print("user_no: \(noStr)")
         user_no = noStr as! Int
     } else {
         user_no = 0
@@ -81,16 +81,101 @@ func timeFormatter(_ time:Int) -> String {
     let customerFormatter = NumberFormatter()
     customerFormatter.positiveFormat = "00.##"
     
-    let str = "\(customerFormatter.string(from: NSNumber(value: hour))!):\(customerFormatter.string(from: NSNumber(value: mins))!):\(customerFormatter.string(from: NSNumber(value: seconds))!)"
+    let str = "\(customerFormatter.string(from: NSNumber(value: hour))!) 小時 \(customerFormatter.string(from: NSNumber(value: mins))!) 分鐘 \(customerFormatter.string(from: NSNumber(value: seconds))!) 秒"
     
     return str
 }
 
 func speedFormatter(_ speed:Double) -> String {
-
+    
     let customerFormatter = NumberFormatter()
     customerFormatter.positiveFormat = "0.##"
     
     let str = customerFormatter.string(from: NSNumber(value: speed))!
     return str
 }
+
+
+
+func dateFormatter(_ date:Date) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy年MM月dd日，HH點 mm分"
+    let weekDay = dateFormatter.string(from: date)
+
+    return weekDay
+}
+
+func weekdayFormatter(_ date:Date) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEEE"
+    let weekDay = dateFormatter.string(from: date)
+
+    return weekDay
+}
+
+func getDateDecoder() -> JSONDecoder {
+    let formatter = DateFormatter()
+    var decoder : JSONDecoder{
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .custom{ decoder  in
+            let container = try decoder.singleValueContainer()
+            let dateString = try container.decode(String.self)
+            formatter.locale = Locale(identifier: "zh_TW")
+            formatter.dateFormat = "yyyyMMddHHmmss"
+            if let date = formatter.date(from: dateString){
+                return date
+            }
+            throw DecodingError.dataCorruptedError(in: container, debugDescription: "Cannot decode date String \(dateString)")
+        }
+        return decoder
+    }
+    return decoder
+}
+
+
+func startOfDayFormatter(date:Date) -> Date{
+    
+    var cal = Calendar.current
+    cal.locale = Locale(identifier: "zh_TW")
+    return Calendar.current.startOfDay(for: date)
+}
+
+func getStartEndDate(endDate:Date) -> Date {
+    
+    var StartEndDate = Calendar.current.date(byAdding: .day, value: 1, to: endDate)
+    StartEndDate = Calendar.current.startOfDay(for: StartEndDate!)
+    
+    return StartEndDate!
+}
+
+func getStartDate(endDate:Date) -> Date {
+    
+    var startDate = Calendar.current.date(byAdding: .day, value: -7, to: endDate)
+    startDate = Calendar.current.startOfDay(for: startDate!)
+    
+    return startDate!
+}
+
+func getEndDate(selected:Date,limited:Date) -> Date {
+    
+    let endDate = Calendar.current.date(byAdding: .day, value: 8, to: selected)
+    if endDate!.compare(limited) == .orderedAscending {
+        return Calendar.current.startOfDay(for: endDate!)
+    }
+    
+    let limitesDate = Calendar.current.date(byAdding: .day, value: 1, to: limited)
+    
+    return Calendar.current.startOfDay(for: limitesDate!)
+    
+}
+
+func getWeekStr(selected:Date,endDate:Date) -> String {
+    
+    let nEndDate = Calendar.current.date(byAdding: .day, value: -1, to: endDate)
+    let formatter = DateFormatter()
+    formatter.dateFormat = "MM月dd日"
+    let startStr = formatter.string(from: selected)
+    let endStr = formatter.string(from: nEndDate!)    
+    return "\(startStr) 至 \(endStr)"
+}
+

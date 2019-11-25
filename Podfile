@@ -10,4 +10,7 @@ target 'RunningFront' do
   # Pods for Socket
   pod 'Starscream', '~> 3.0.2'
 
+  # Pods for Charts
+  pod 'Charts'
+
 end
