@@ -30,6 +30,11 @@ func executeTask(_ url_server: URL, _ requestParam: [String: Any], completionHan
     task.resume()
 }
 
+/**
+ 類似android的showToast
+ - Parameter message:想要呈現的文字
+ - Parameter viewController: 當下在使用的VC，一般只要輸入self即可
+*/
 func showSimpleAlert(message: String, viewController: UIViewController) {
     let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
     let cancel = UIAlertAction(title: "確認", style: .default)
@@ -38,6 +43,13 @@ func showSimpleAlert(message: String, viewController: UIViewController) {
     viewController.present(alertController, animated: true, completion:nil)
 }
 
+
+/**
+ 抓取偏好設定裡面的user_no，
+ ````
+ let user_no = getUserNo()
+ ````
+ */
 func getUserNo() -> Int {
     var user_no = 0
     if let noStr = UserDefaults.standard.value(forKey: "user_no") {
@@ -49,6 +61,9 @@ func getUserNo() -> Int {
     return user_no
 }
 
+/**
+呼叫即登出
+*/
 func logout(VC:UIViewController) -> Bool {
     let domain = Bundle.main.bundleIdentifier!
     UserDefaults.standard.removePersistentDomain(forName: domain)
@@ -62,8 +77,13 @@ func logout(VC:UIViewController) -> Bool {
     return false
 }
 
-
-func doubleFormatter(double:Double) -> Double {
+/**
+將原本的double取到小數點第二位
+````
+let double = doubleFormatter(原數值)
+````
+*/
+func doubleFormatter(_ double:Double) -> Double {
     let nsNumber = NSNumber(value: double)
     let customerFormatter = NumberFormatter()
     customerFormatter.positiveFormat = "#,##0.##"
@@ -71,6 +91,13 @@ func doubleFormatter(double:Double) -> Double {
     return Double(customerFormatter.number(from: customerFormatter.string(from: nsNumber)!)!)
 }
 
+/**
+將資料庫裡的跑步時間格式化，變成oo小時oo分鐘oo秒，
+由於資料庫的數值是double形式，因此記得要轉型
+````
+let str = doubleFormatter(Int(原數值))
+````
+*/
 func timeFormatter(_ time:Int) -> String {
     
     let seconds = time % 60
@@ -81,7 +108,6 @@ func timeFormatter(_ time:Int) -> String {
     customerFormatter.positiveFormat = "00.##"
     
     let str = "\(customerFormatter.string(from: NSNumber(value: hour))!) 小時 \(customerFormatter.string(from: NSNumber(value: mins))!) 分鐘 \(customerFormatter.string(from: NSNumber(value: seconds))!) 秒"
-    
     return str
 }
 
@@ -95,7 +121,13 @@ func speedFormatter(_ speed:Double) -> String {
 }
 
 
-
+/**
+將資料庫裡的跑步日期格式化，變成"yyyy年MM月dd日，HH點 mm分"，
+由於資料庫的數值是double形式，因此記得要轉型
+````
+let str = doubleFormatter(原數值)
+````
+*/
 func dateFormatter(_ date:Date) -> String {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy年MM月dd日，HH點 mm分"
@@ -103,14 +135,22 @@ func dateFormatter(_ date:Date) -> String {
     return weekDay
 }
 
+/**
+ 輸入date抓取目前週幾
+ */
 func weekdayFormatter(_ date:Date) -> String {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "EEEE"
     let weekDay = dateFormatter.string(from: date)
-
     return weekDay
 }
 
+/**
+ 若抓取伺服器的timestamp必須使用此decoder
+ ````
+ let decoder = getDateDecoder
+ ````
+*/
 func getDateDecoder() -> JSONDecoder {
     let formatter = DateFormatter()
     var decoder : JSONDecoder{
