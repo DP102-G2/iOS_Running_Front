@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,10 @@
 		A92226FA238AA343008314BC /* plateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92226F9238AA343008314BC /* plateVC.swift */; };
 		A92226FD238AB92C008314BC /* RunningInquireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92226FC238AB92C008314BC /* RunningInquireVC.swift */; };
 		A9222700238BBAEB008314BC /* RunningInquireTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92226FF238BBAEB008314BC /* RunningInquireTVC.swift */; };
+		A9222703238BDED3008314BC /* SettingMainTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9222702238BDED3008314BC /* SettingMainTVC.swift */; };
+		A9222706238BF51D008314BC /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A9222705238BF51D008314BC /* FacebookLogin */; };
+		A9222708238BF54C008314BC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9222707238BF54C008314BC /* Accelerate.framework */; };
+		A922270A238C0E75008314BC /* SettingEditTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9222709238C0E75008314BC /* SettingEditTVC.swift */; };
 		A93186AA23855FBB005D7E9A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93186A923855FBB005D7E9A /* Common.swift */; };
 		A9378E1E23859CB6003355E3 /* SignUp_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9378E1D23859CB6003355E3 /* SignUp_TVC.swift */; };
 		A9378E41238675B7003355E3 /* RunningStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9378E40238675B7003355E3 /* RunningStartVC.swift */; };
@@ -26,6 +30,8 @@
 		A9599A3123856D8B004473C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9599A3023856D8B004473C7 /* User.swift */; };
 		A983D0572383FEA700A135C6 /* UICommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D0562383FEA700A135C6 /* UICommon.swift */; };
 		A983D0642384168B00A135C6 /* RunningMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A983D0632384168B00A135C6 /* RunningMain.storyboard */; };
+		A98F2FB4238CB69D00C4B5D4 /* ServerTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F2FB3238CB69D00C4B5D4 /* ServerTVC.swift */; };
+		A98F2FB6238CB75A00C4B5D4 /* ServerMessageReceiverTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F2FB5238CB75A00C4B5D4 /* ServerMessageReceiverTVCell.swift */; };
 		A9C01CED238423DA008C6FE9 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C01CEC238423DA008C6FE9 /* SettingVC.swift */; };
 		A9EF07EF23841BBC003B22DA /* RunningInquire.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9EF07EE23841BBC003B22DA /* RunningInquire.storyboard */; };
 		A9EF07F123841C82003B22DA /* RunningAchieve.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9EF07F023841C82003B22DA /* RunningAchieve.storyboard */; };
@@ -53,6 +59,9 @@
 		A92226F9238AA343008314BC /* plateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plateVC.swift; sourceTree = "<group>"; };
 		A92226FC238AB92C008314BC /* RunningInquireVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningInquireVC.swift; sourceTree = "<group>"; };
 		A92226FF238BBAEB008314BC /* RunningInquireTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningInquireTVC.swift; sourceTree = "<group>"; };
+		A9222702238BDED3008314BC /* SettingMainTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMainTVC.swift; sourceTree = "<group>"; };
+		A9222707238BF54C008314BC /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		A9222709238C0E75008314BC /* SettingEditTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingEditTVC.swift; sourceTree = "<group>"; };
 		A93186A923855FBB005D7E9A /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		A9378E1D23859CB6003355E3 /* SignUp_TVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_TVC.swift; sourceTree = "<group>"; };
 		A9378E40238675B7003355E3 /* RunningStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningStartVC.swift; sourceTree = "<group>"; };
@@ -62,6 +71,8 @@
 		A9599A3023856D8B004473C7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A983D0562383FEA700A135C6 /* UICommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICommon.swift; sourceTree = "<group>"; };
 		A983D0632384168B00A135C6 /* RunningMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RunningMain.storyboard; sourceTree = "<group>"; };
+		A98F2FB3238CB69D00C4B5D4 /* ServerTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTVC.swift; sourceTree = "<group>"; };
+		A98F2FB5238CB75A00C4B5D4 /* ServerMessageReceiverTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerMessageReceiverTVCell.swift; sourceTree = "<group>"; };
 		A9C01CEC238423DA008C6FE9 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		A9EF07EE23841BBC003B22DA /* RunningInquire.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RunningInquire.storyboard; sourceTree = "<group>"; };
 		A9EF07F023841C82003B22DA /* RunningAchieve.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RunningAchieve.storyboard; sourceTree = "<group>"; };
@@ -79,6 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9222708238BF54C008314BC /* Accelerate.framework in Frameworks */,
+				A9222706238BF51D008314BC /* FacebookLogin in Frameworks */,
 				62C99F0DDC14F99057863778 /* Pods_RunningFront.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +111,7 @@
 		516571880B479E5DCA41B1E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9222707238BF54C008314BC /* Accelerate.framework */,
 				A64D13BAAB3560DEA6EC059A /* Pods_RunningFront.framework */,
 			);
 			name = Frameworks;
@@ -124,6 +138,7 @@
 		A91143252382BC8900D7DF02 /* RunningFront */ = {
 			isa = PBXGroup;
 			children = (
+				A98F2FD9238CD9D800C4B5D4 /* Server */,
 				A983D0582384027500A135C6 /* Common */,
 				A91143262382BC8900D7DF02 /* AppDelegate.swift */,
 				A91143282382BC8900D7DF02 /* SceneDelegate.swift */,
@@ -155,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				A9EF07FE23842182003B22DA /* Setting.storyboard */,
+				A9222709238C0E75008314BC /* SettingEditTVC.swift */,
+				A9222702238BDED3008314BC /* SettingMainTVC.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -200,9 +217,18 @@
 				A9EF07F423841ECF003B22DA /* ShopMain.storyboard */,
 				A9EF07F623841F1F003B22DA /* ShopCart.storyboard */,
 				A9EF07F823841F4C003B22DA /* ShopOrder.storyboard */,
-				A9EF07FA23841F80003B22DA /* ShopServer.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		A98F2FD9238CD9D800C4B5D4 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF07FA23841F80003B22DA /* ShopServer.storyboard */,
+				A98F2FB5238CB75A00C4B5D4 /* ServerMessageReceiverTVCell.swift */,
+				A98F2FB3238CB69D00C4B5D4 /* ServerTVC.swift */,
+			);
+			path = Server;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +249,9 @@
 			dependencies = (
 			);
 			name = RunningFront;
+			packageProductDependencies = (
+				A9222705238BF51D008314BC /* FacebookLogin */,
+			);
 			productName = RunningFront;
 			productReference = A91143232382BC8900D7DF02 /* RunningFront.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +280,9 @@
 				Base,
 			);
 			mainGroup = A911431A2382BC8900D7DF02;
+			packageReferences = (
+				A9222704238BF51C008314BC /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = A91143242382BC8900D7DF02 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -336,15 +368,19 @@
 				A9C01CED238423DA008C6FE9 /* SettingVC.swift in Sources */,
 				A9599A2E23856D23004473C7 /* LoginMainVC.swift in Sources */,
 				A9599A3123856D8B004473C7 /* User.swift in Sources */,
+				A98F2FB4238CB69D00C4B5D4 /* ServerTVC.swift in Sources */,
 				A92226FD238AB92C008314BC /* RunningInquireVC.swift in Sources */,
 				A911432B2382BC8900D7DF02 /* RunningMainVC.swift in Sources */,
 				A9378E1E23859CB6003355E3 /* SignUp_TVC.swift in Sources */,
 				A9EF07FD2384202C003B22DA /* ShopMainVC.swift in Sources */,
 				A91143272382BC8900D7DF02 /* AppDelegate.swift in Sources */,
+				A98F2FB6238CB75A00C4B5D4 /* ServerMessageReceiverTVCell.swift in Sources */,
 				A93186AA23855FBB005D7E9A /* Common.swift in Sources */,
 				A92226FA238AA343008314BC /* plateVC.swift in Sources */,
 				A9222700238BBAEB008314BC /* RunningInquireTVC.swift in Sources */,
 				A91143292382BC8900D7DF02 /* SceneDelegate.swift in Sources */,
+				A9222703238BDED3008314BC /* SettingMainTVC.swift in Sources */,
+				A922270A238C0E75008314BC /* SettingEditTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +526,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83G69X7NQR;
 				INFOPLIST_FILE = RunningFront/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -508,6 +545,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83G69X7NQR;
 				INFOPLIST_FILE = RunningFront/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -542,6 +580,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A9222704238BF51C008314BC /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A9222705238BF51D008314BC /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9222704238BF51C008314BC /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A911431B2382BC8900D7DF02 /* Project object */;
 }

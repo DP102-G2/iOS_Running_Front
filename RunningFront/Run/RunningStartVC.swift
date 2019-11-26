@@ -70,12 +70,8 @@ class RunningStartVC: UIViewController,MKMapViewDelegate {
                     self.navigationController?.popViewController(animated: true)
                     showSimpleAlert(message: "儲存成功", viewController: self)
                 }
-                
             }
-            
-            
         }
-        
     }
     
     @objc func startRun() {

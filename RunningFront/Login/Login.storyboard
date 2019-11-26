@@ -35,6 +35,14 @@
                                     <action selector="btLogin:" destination="hTc-m0-xHA" eventType="touchDown" id="LSd-Hq-4Oq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfb-i0-yHB">
+                                <rect key="frame" x="173" y="381" width="68" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="bicycle"/>
+                                <connections>
+                                    <action selector="btFBLogin:" destination="hTc-m0-xHA" eventType="touchUpInside" id="6ku-2b-tib"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="W0P-eo-yqX"/>
@@ -189,6 +197,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bicycle" width="1024" height="1024"/>
         <image name="checkmark" catalog="system" width="64" height="56"/>
     </resources>
 </document>

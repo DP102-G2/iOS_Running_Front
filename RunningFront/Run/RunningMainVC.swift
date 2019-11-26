@@ -15,16 +15,9 @@ class RunningMainVC: plateVC,ChartViewDelegate {
     var runList = [Run]()
     let url = URL(string: "\(common_url)RunServlet")
     
-    
     @IBOutlet weak var lbTimeSum: UILabel!
     @IBOutlet weak var lbCarlories: UILabel!
-    
     @IBOutlet weak var chartView: PieChartView!
-    @IBAction func btLgout(_ sender: UIButton) {
-        if logout(VC: self) == false{
-            naviToLogin(VC: self)
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

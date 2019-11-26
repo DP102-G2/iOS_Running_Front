@@ -14,7 +14,6 @@ func dateFormat(date:Date) -> String {
 let common_url = "http://127.0.0.1:8080/RunningWeb/"
 
 func executeTask(_ url_server: URL, _ requestParam: [String: Any], completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
-    
     // requestParam值為Any就必須使用JSONSerialization.data()，而非JSONEncoder.encode()
     let jsonData = try! JSONSerialization.data(withJSONObject: requestParam)
     // 宣告請求，並且為其設定相關數值
@@ -101,7 +100,6 @@ func dateFormatter(_ date:Date) -> String {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy年MM月dd日，HH點 mm分"
     let weekDay = dateFormatter.string(from: date)
-
     return weekDay
 }
 
@@ -177,5 +175,20 @@ func getWeekStr(selected:Date,endDate:Date) -> String {
     let startStr = formatter.string(from: selected)
     let endStr = formatter.string(from: nEndDate!)    
     return "\(startStr) 至 \(endStr)"
+}
+
+func dataToDictionary(data:Data) ->Dictionary<String, Any>?{
+    do{
+        let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+
+        let dic = json as! Dictionary<String, Any>
+
+        return dic
+
+    }catch _ {
+
+        print("失败")
+        return nil
+    }
 }
 
