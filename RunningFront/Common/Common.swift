@@ -1,22 +1,33 @@
 import Foundation
 import UIKit
 
-// 實機
+/* 實機 URL */
 // let URL_SERVER = "http://192.168.0.101:8080/RunningWeb/"
-// 模擬器
 
-func dateFormat(date:Date) -> String {
+/* 模擬器 */
+let common_url = "http://127.0.0.1:8080/RunningWeb/"
+
+
+/* ==================== * ==================== */
+
+
+func dateFormat(date: Date) -> String {
     let format = DateFormatter()
     format.dateFormat = "yyyy-MM-dd"
     return format.string(from: date)
 }
 
-let common_url = "http://127.0.0.1:8080/RunningWeb/"
-//let common_url = "http://192.168.0.101:8080/RunningWeb/"
 
+/* ==================== * ==================== */
 
+/**
+ * 連線 Servlet 程式
+ * - Parameters url_server: 連線網址
+ * - Parameters requestParam: 連線請求的參數
+ */
 func executeTask(_ url_server: URL, _ requestParam: [String: Any], completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
-    // requestParam值為Any就必須使用JSONSerialization.data()，而非JSONEncoder.encode()
+    /* requestParam 值為 Any 就必須使用 JSONSerialization.data()
+     * 而非 JSONEncoder.encode() */
     let jsonData = try! JSONSerialization.data(withJSONObject: requestParam)
     // 宣告請求，並且為其設定相關數值
     var request = URLRequest(url: url_server)
@@ -27,16 +38,17 @@ func executeTask(_ url_server: URL, _ requestParam: [String: Any], completionHan
     request.httpBody = jsonData
     // 創建一個訪問的會議及單獨溝通的空間
     let sessionData = URLSession.shared
-    // 建立連線資料，放入請求資訊，completionHandler代表「當請求完後要接續處理的事情」，由此func的建構式來置入
+    /* 建立連線資料，放入請求資訊
+     * completionHandler 代表「當請求完後要接續處理的事情」，由此func的建構式來置入 */
     let task = sessionData.dataTask(with: request, completionHandler: completionHandler)
     task.resume()
 }
 
 /**
- 類似android的showToast
- - Parameter message:想要呈現的文字
- - Parameter viewController: 當下在使用的VC，一般只要輸入self即可
-*/
+ * 類似 Android 的 showToast
+ - Parameter message:        想要呈現的文字
+ - Parameter viewController: 當前的 ViewController，一般只要輸入 self 即可
+ */
 func showSimpleAlert(message: String, viewController: UIViewController) {
     let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
     let cancel = UIAlertAction(title: "確認", style: .default)
@@ -46,11 +58,14 @@ func showSimpleAlert(message: String, viewController: UIViewController) {
 }
 
 
+/* ==================== 存取會員資訊 ==================== */
+
 /**
- 抓取偏好設定裡面的user_no，
- ````
- let user_no = getUserNo()
- ````
+ * 抓取偏好設定裡面的 user_no
+ - Returns: 會員編號的 Int
+ * ```
+ * let user_no = getUserNo()
+ * ```
  */
 func getUserNo() -> Int {
     var user_no = 0
@@ -64,9 +79,11 @@ func getUserNo() -> Int {
 }
 
 /**
-呼叫即登出
-*/
-func logout(VC:UIViewController) -> Bool {
+ * 呼叫此函式即登出會員
+ - Parameter VC: 當前使用的 ViewController
+ - Returns:      判斷是否已經會登出會員的 Bool
+ */
+func logout(VC: UIViewController) -> Bool {
     let defaults = UserDefaults.standard
     
     defaults.set(0, forKey: "user_no")
@@ -75,16 +92,21 @@ func logout(VC:UIViewController) -> Bool {
     if user_no == 0{
         return true
     }
-    
     return false
 }
 
+
+/* ==================== 資料格式化 ==================== */
+
 /**
-將原本的double取到小數點第二位
-````
-let double = doubleFormatter(原數值)
-````
-*/
+ * 將原本的 Double 取到小數點後第二位
+ - Parameter double: 原本的數字（Double型別）
+ - Returns:          取至小數點後第二位的 Double
+ * ```
+ * let double_origin = 1234.5678
+ * let double_format = doubleFormatter(double_origin)
+ * ```
+ */
 func doubleFormatter(_ double:Double) -> Double {
     let nsNumber = NSNumber(value: double)
     let customerFormatter = NumberFormatter()
@@ -94,13 +116,16 @@ func doubleFormatter(_ double:Double) -> Double {
 }
 
 /**
-將資料庫裡的跑步時間格式化，變成oo小時oo分鐘oo秒，
-由於資料庫的數值是double形式，因此記得要轉型
-````
+ * 將資料庫裡的跑步時間格式化，變成 oo小時oo分鐘oo秒。
+ * 由於資料庫的數值是 double 形式，因此記得要轉型
+ - Parameter time: 秒數的 Int
+ - Returns:        oo 小時 oo 分鐘 oo 秒
+ - Warning:        由於資料庫的數值是 double 形式，記得要轉型
+```
 let str = doubleFormatter(Int(原數值))
-````
-*/
-func timeFormatter(_ time:Int) -> String {
+```
+ */
+func timeFormatter(_ time: Int) -> String {
     
     let seconds = time % 60
     let mins = time / 60
@@ -138,7 +163,7 @@ func dateFormatter(_ date:Date) -> String {
 }
 
 /**
- 輸入date抓取目前週幾
+ * 輸入 date 抓取目前週幾
  */
 func weekdayFormatter(_ date:Date) -> String {
     let dateFormatter = DateFormatter()
@@ -148,11 +173,11 @@ func weekdayFormatter(_ date:Date) -> String {
 }
 
 /**
- 若抓取伺服器的timestamp必須使用此decoder
- ````
- let decoder = getDateDecoder
- ````
-*/
+ * 若抓取伺服器的 timestamp 必須使用此 JSONDecoder
+ * ```
+ * let dateDecoder = getDateDecoder()
+ * ```
+ */
 func getDateDecoder() -> JSONDecoder {
     let formatter = DateFormatter()
     var decoder : JSONDecoder{
@@ -172,6 +197,8 @@ func getDateDecoder() -> JSONDecoder {
     return decoder
 }
 
+
+/* ==================== * ==================== */
 
 func startOfDayFormatter(date:Date) -> Date{
     
@@ -215,7 +242,7 @@ func getWeekStr(selected:Date,endDate:Date) -> String {
     let formatter = DateFormatter()
     formatter.dateFormat = "MM月dd日"
     let startStr = formatter.string(from: selected)
-    let endStr = formatter.string(from: nEndDate!)    
+    let endStr = formatter.string(from: nEndDate!)
     return "\(startStr) 至 \(endStr)"
 }
 
@@ -234,5 +261,5 @@ func getAPIData(_ url:URL , completionHandler:@escaping (Data?, URLResponse?, Er
     
     let task = URLSession.shared.dataTask(with: url, completionHandler: completionHandler)
     task.resume()
-
+    
 }
