@@ -26,8 +26,8 @@ class RunningInquireVC: UIViewController,ChartViewDelegate,UITableViewDelegate,U
         let cell = tableView.dequeueReusableCell(withIdentifier: "RunningInquireTVC") as! RunningInquireTVC
         cell.lbRun_Date.text = dateFormatter(pieRunList[id].run_date!)
         cell.lbRun_Time.text = "跑步時間：\(timeFormatter(Int(pieRunList[id].time)))"
-        cell.lbRun_Carlorie.text = "消耗卡路里：\(String(doubleFormatter(double: pieRunList[id].calorie))) 卡"
-        cell.lbRun_Distance.text = "跑步距離：\(String(doubleFormatter(double: pieRunList[id].distance))) 公尺"
+        cell.lbRun_Carlorie.text = "消耗卡路里：\(String(doubleFormatter(pieRunList[id].calorie))) 卡"
+        cell.lbRun_Distance.text = "跑步距離：\(String(doubleFormatter(pieRunList[id].distance))) 公尺"
         
         var image =  UIImage(systemName: "o.circle")
         var requestParam = [String:String]()

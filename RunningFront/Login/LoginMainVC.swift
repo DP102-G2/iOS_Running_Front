@@ -16,7 +16,7 @@ class LoginMainVC: UIViewController {
     @IBOutlet weak var tfUserPassword: UITextField!
     let url = URL(string: "\(common_url)SettingServlet")
     var user : User?
-    
+    var image : UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,26 +32,32 @@ class LoginMainVC: UIViewController {
                 Profile.loadCurrentProfile { (profile, error) in
                     if let profile = profile{
                         
-                        var requestParam = [String:String]()
-                        requestParam["action"] = "googleSignIn"
-                        requestParam["user_id"] = profile.userID
-                        requestParam["user_name"] = profile.name
-                        requestParam["user_email"] = ""
-                        let dateStr = dateFormat(date: Date())
-                        requestParam["user_regtime"] = dateStr
-                        executeTask(self.url!, requestParam) { (data, response, error) in
-                            if data != nil && error == nil{
-                                
-                                let dic = dataToDictionary(data: data!)
-                                let user_no = dic!["user_no"]
-                                
-                                DispatchQueue.main.sync {
-                                    UserDefaults.standard.set(user_no, forKey: "user_no")
-                                    naviToRun(VC: self)
+                        getAPIData(profile.imageURL(forMode: .normal, size: CGSize(width: 200, height: 200))!) { (data, response, error) in
+                            self.image = UIImage(data: data!)
+                            if self.image != nil {
+                                var requestParam = [String:String]()
+                                requestParam["action"] = "FacebookSignIn"
+                                requestParam["user_id"] = profile.userID
+                                requestParam["user_name"] = profile.name
+                                requestParam["user_email"] = ""
+                                requestParam["user_regtime"] = dateFormat(date: Date())
+                                requestParam["user_image"] = self.image?.jpegData(compressionQuality: 1.0)?.base64EncodedString()
+                                executeTask(self.url!, requestParam) { (data, response, error) in
+                                    if data != nil && error == nil{
+                                        
+                                        let dic = dataToDictionary(data: data!)
+                                        let user_no = dic!["user_no"]
+                                        
+                                        DispatchQueue.main.sync {
+                                            UserDefaults.standard.set(user_no, forKey: "user_no")
+                                            naviToRun(VC: self)
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
+                    
                 }
                 manager.logOut()
             } else {
@@ -78,7 +84,6 @@ class LoginMainVC: UIViewController {
                 if let mLogin = try? JSONDecoder().decode(User.self, from: data!){
                     user = mLogin
                     DispatchQueue.main.sync {
-                        UserDefaults.standard.set(try! JSONEncoder().encode(user), forKey: "userLogin")
                         UserDefaults.standard.set(user.no, forKey: "user_no")
                         naviToRun(VC: self)
                     }

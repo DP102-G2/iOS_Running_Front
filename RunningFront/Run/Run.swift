@@ -43,7 +43,7 @@ class Run: Codable {
             distanceSum += run.distance
         }
         
-        return doubleFormatter(double: distanceSum)
+        return doubleFormatter(distanceSum)
     }
     static func getCalories(_ runList:[Run]) -> Double{
         
@@ -52,7 +52,7 @@ class Run: Codable {
             calories += run.calorie
         }
         
-        return doubleFormatter(double: calories)
+        return doubleFormatter(calories)
     }
     
     static func getTimeSum(_ runList:[Run]) -> Double{
@@ -62,7 +62,7 @@ class Run: Codable {
             timeSum += run.time
         }
         
-        return doubleFormatter(double: timeSum)
+        return doubleFormatter(timeSum)
     }
 
     

@@ -53,14 +53,15 @@ extension RunningMainVC {
         
         executeTask(url!, requestParam) { (data, response, error) in
             let jsonDecoder = getDateDecoder()
-            self.runList = try! jsonDecoder.decode([Run].self, from: data!)
+            if let runs = try? jsonDecoder.decode([Run].self, from: data!){
+            self.runList = runs
             print("runList.count: \(String(self.runList.count))")
             
             DispatchQueue.main.async {
                 self.setPieChartView()
                 self.setLable()
             }
-            
+            }
         }
     }
     

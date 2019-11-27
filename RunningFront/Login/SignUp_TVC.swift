@@ -23,7 +23,6 @@ class SignUp_TVC: UITableViewController {
     }
 
     @IBAction func btSignUp(_ sender: Any) {
-        showSimpleAlert(message: "Test", viewController: self)
         let id = tfID.text
         let name = tfName.text
         let password = tfPassword.text
@@ -43,9 +42,7 @@ class SignUp_TVC: UITableViewController {
             if data != nil && error == nil {
                 if let user_no = try? JSONDecoder().decode(Int.self, from: data!){
                     if user_no != 0{
-                        showSimpleAlert(message: "Success", viewController: self)
-                        let login = User(user_no, id!, name!, password!)
-                        UserDefaults.standard.set(try! JSONEncoder().encode(login), forKey: "userLogin")
+                        UserDefaults.standard.set(user_no, forKey: "user_no")
                         DispatchQueue.main.async {
                             naviToRun(VC: self)
                         }

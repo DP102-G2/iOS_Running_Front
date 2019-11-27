@@ -12,6 +12,8 @@ func dateFormat(date:Date) -> String {
 }
 
 let common_url = "http://127.0.0.1:8080/RunningWeb/"
+//let common_url = "http://192.168.0.101:8080/RunningWeb/"
+
 
 func executeTask(_ url_server: URL, _ requestParam: [String: Any], completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
     // requestParam值為Any就必須使用JSONSerialization.data()，而非JSONEncoder.encode()
@@ -65,15 +67,15 @@ func getUserNo() -> Int {
 呼叫即登出
 */
 func logout(VC:UIViewController) -> Bool {
-    let domain = Bundle.main.bundleIdentifier!
-    UserDefaults.standard.removePersistentDomain(forName: domain)
-    UserDefaults.standard.synchronize()
-    print(String(UserDefaults.standard.dictionaryRepresentation().keys.count))
+    let defaults = UserDefaults.standard
     
-    if UserDefaults.standard.dictionaryRepresentation().keys.count == 0{
-        showSimpleAlert(message: "登出成功", viewController: VC)
+    defaults.set(0, forKey: "user_no")
+    
+    let user_no = getUserNo()
+    if user_no == 0{
         return true
     }
+    
     return false
 }
 
@@ -220,15 +222,17 @@ func getWeekStr(selected:Date,endDate:Date) -> String {
 func dataToDictionary(data:Data) ->Dictionary<String, Any>?{
     do{
         let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-
         let dic = json as! Dictionary<String, Any>
-
         return dic
-
     }catch _ {
-
         print("失败")
         return nil
     }
 }
 
+func getAPIData(_ url:URL , completionHandler:@escaping (Data?, URLResponse?, Error?) -> Void) {
+    
+    let task = URLSession.shared.dataTask(with: url, completionHandler: completionHandler)
+    task.resume()
+
+}

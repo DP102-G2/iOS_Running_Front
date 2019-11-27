@@ -78,14 +78,14 @@ class RunningStartVC: UIViewController,MKMapViewDelegate {
         time += 1
         lbTime.text = "時間：\(timeFormatter(time))"
         if spanList.count > 3{
-            distance = doubleFormatter(double: getDistance(from: spanList[0], to: spanList[spanList.count-1]))
+            distance = doubleFormatter(getDistance(from: spanList[0], to: spanList[spanList.count-1]))
         }
         
         lbDistance.text = "距離：\(distance) 公尺"
         
-        speed = doubleFormatter(double: (distance / Double(time) * 3600.0 / 1000.0))
+        speed = doubleFormatter((distance / Double(time) * 3600.0 / 1000.0))
         lbSpeed.text = "速度：\(speedFormatter(speed)) 小時/公里"
-        calorie = doubleFormatter(double: 70.0 * (Double(time) / 3600.0) * 30.0 / (Double(time) / Double(distance) * 400.0 / 60.0))
+        calorie = doubleFormatter(70.0 * (Double(time) / 3600.0) * 30.0 / (Double(time) / Double(distance) * 400.0 / 60.0))
         lbCalorie.text = "卡路里：\(speedFormatter(calorie)) 卡"
         
         
