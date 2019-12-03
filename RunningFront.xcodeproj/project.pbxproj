@@ -43,6 +43,8 @@
 		A9EF07FB23841F80003B22DA /* ShopServer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9EF07FA23841F80003B22DA /* ShopServer.storyboard */; };
 		A9EF07FD2384202C003B22DA /* ShopMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF07FC2384202C003B22DA /* ShopMainVC.swift */; };
 		A9EF07FF23842182003B22DA /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9EF07FE23842182003B22DA /* Setting.storyboard */; };
+		D1044EB22395FB65007C45E0 /* ShopOrderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1044EB12395FB65007C45E0 /* ShopOrderTVC.swift */; };
+		D1044EB423960115007C45E0 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1044EB323960115007C45E0 /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,8 @@
 		A9EF07FA23841F80003B22DA /* ShopServer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopServer.storyboard; sourceTree = "<group>"; };
 		A9EF07FC2384202C003B22DA /* ShopMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMainVC.swift; sourceTree = "<group>"; };
 		A9EF07FE23842182003B22DA /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		D1044EB12395FB65007C45E0 /* ShopOrderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopOrderTVC.swift; sourceTree = "<group>"; };
+		D1044EB323960115007C45E0 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,7 @@
 		A91143252382BC8900D7DF02 /* RunningFront */ = {
 			isa = PBXGroup;
 			children = (
+				D1044EB02395F778007C45E0 /* Order */,
 				A983D0582384027500A135C6 /* Common */,
 				A98F2FD9238CD9D800C4B5D4 /* Server */,
 				A91143262382BC8900D7DF02 /* AppDelegate.swift */,
@@ -219,7 +224,6 @@
 				A9EF07F023841C82003B22DA /* RunningAchieve.storyboard */,
 				A9EF07F423841ECF003B22DA /* ShopMain.storyboard */,
 				A9EF07F623841F1F003B22DA /* ShopCart.storyboard */,
-				A9EF07F823841F4C003B22DA /* ShopOrder.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -232,6 +236,16 @@
 				A98F2FB3238CB69D00C4B5D4 /* ServerTVC.swift */,
 			);
 			path = Server;
+			sourceTree = "<group>";
+		};
+		D1044EB02395F778007C45E0 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF07F823841F4C003B22DA /* ShopOrder.storyboard */,
+				D1044EB12395FB65007C45E0 /* ShopOrderTVC.swift */,
+				D1044EB323960115007C45E0 /* Order.swift */,
+			);
+			path = Order;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +383,7 @@
 				A9378E432387779D003355E3 /* Run.swift in Sources */,
 				A983D0572383FEA700A135C6 /* UICommon.swift in Sources */,
 				A9C01CED238423DA008C6FE9 /* SettingVC.swift in Sources */,
+				D1044EB423960115007C45E0 /* Order.swift in Sources */,
 				A9599A2E23856D23004473C7 /* LoginMainVC.swift in Sources */,
 				A9599A3123856D8B004473C7 /* User.swift in Sources */,
 				A98F2FDB238D488800C4B5D4 /* SettingTVC.swift in Sources */,
@@ -382,6 +397,7 @@
 				A93186AA23855FBB005D7E9A /* Common.swift in Sources */,
 				A92226FA238AA343008314BC /* plateVC.swift in Sources */,
 				A9222700238BBAEB008314BC /* RunningInquireTVC.swift in Sources */,
+				D1044EB22395FB65007C45E0 /* ShopOrderTVC.swift in Sources */,
 				A91143292382BC8900D7DF02 /* SceneDelegate.swift in Sources */,
 				A9222703238BDED3008314BC /* SettingMainTVC.swift in Sources */,
 				A922270A238C0E75008314BC /* SettingEditTVC.swift in Sources */,
